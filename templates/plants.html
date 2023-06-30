@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Nursery</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plant Nursery</h1>
+    <h2>Plants</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Common Name</th>
+            <th>Genus</th>
+            <th>Species</th>
+            <th>Cultivar</th>
+            <th>Description</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Group</th>
+            <th>Quantity</th>
+            <th>Potting Medium</th>
+            <th>Potting Date</th>
+            <th>Fertilizer Name</th>
+            <th>Application Date</th>
+            <th>Testing Notes</th>
+        </tr>
+        {% for plant in plants %}
+        <tr>
+            <td>{{ plant[0] }}</td>
+            <td>{{ plant[2] }}</td>
+            <td>{{ plant[3] }}</td>
+            <td>{{ plant[4] }}</td>
+            <td>{{ plant[5] }}</td>
+            <td>{{ plant[6] }}</td>
+            <td>{{ plant[7] }}</td>
+            <td>{{ plant[8] }}</td>
+            <td>{{ plant[11] }}</td>
+            <td>{{ plant[12] }}</td>
+            <td>{{ plant[13] }}</td>
+            <td>{{ plant[14] }}</td>
+            <td>{{ plant[15] }}</td>
+            <td>{{ plant[16] }}</td>
+            <td>{{ plant[17] }}</td>
+            <td>{{ plant[18] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

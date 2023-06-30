@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Potting Record</title>
+</head>
+<body>
+    <h1>Add Potting Record</h1>
+    <form action="/potting" method="POST">
+        <label for="plant_id">Plant ID:</label>
+        <input type="text" name="plant_id" id="plant_id" required><br><br>
+
+        <label for="potting_date">Potting Date:</label>
+        <input type="text" name="potting_date" id="potting_date" required><br><br>
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes" required></textarea><br><br>
+
+        <input type="submit" value="Add Potting Record">
+    </form>
+</body>
+</html>

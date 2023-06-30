@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Nursery - Add Plant</title>
+</head>
+<body>
+    <h1>Add Plant</h1>
+    <form action="/plants/add" method="POST">
+        <label for="common_name">Common Name:</label><br>
+        <input type="text" id="common_name" name="common_name" required><br><br>
+        
+        <label for="genus">Genus:</label><br>
+        <input type="text" id="genus" name="genus" required><br><br>
+        
+        <label for="species">Species:</label><br>
+        <input type="text" id="species" name="species" required><br><br>
+        
+        <label for="cultivar">Cultivar:</label><br>
+        <input type="text" id="cultivar" name="cultivar" required><br><br>
+        
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" required></textarea><br><br>
+        
+        <label for="size">Size:</label><br>
+        <input type="text" id="size" name="size" required><br><br>
+        
+        <label for="price">Price:</label><br>
+        <input type="text" id="price" name="price" required><br><br>
+        
+        <label for="group">Group:</label><br>
+        <input type="text" id="group" name="group" required><br><br>
+        
+        <label for="quantity">Quantity:</label><br>
+        <input type="text" id="quantity" name="quantity" required><br><br>
+        
+        <label for="potting_medium">Potting Medium:</label><br>
+        <input type="text" id="potting_medium" name="potting_medium" required><br><br>
+        
+        <label for="potting_date">Potting Date:</label><br>
+        <input type="text" id="potting_date" name="potting_date" required><br><br>
+        
+        <label for="fertilizer_name">Fertilizer Name:</label><br>
+        <input type="text" id="fertilizer_name" name="fertilizer_name" required><br><br>
+        
+        <label for="application_date">Application Date:</label><br>
+        <input type="text" id="application_date" name="application_date" required><br><br>
+        
+        <label for="notes">Notes:</label><br>
+        <textarea id="notes" name="notes" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="Add Plant">
+    </form>
+</body>
+</html>

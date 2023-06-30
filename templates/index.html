@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Nursery</title>
+</head>
+<body>
+    <h1>Add a New Plant</h1>
+    <form action="/plants" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size" required><br><br>
+        <input type="submit" value="Add Plant">
+    </form>
+    
+    <h1>Plant Inventory</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Size</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for plant in plants %}
+            <tr>
+                <td>{{ plant[0] }}</td>
+                <td>{{ plant[1] }}</td>
+                <td>{{ plant[2] }}</td>
+                <td>{{ plant[3] }}</td>
+                <td>{{ plant[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

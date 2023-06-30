@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Groups</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plant Groups</h1>
+    <table id="plant-groups-table">
+        <thead>
+            <tr>
+                <th>Group ID</th>
+                <th>Group Name</th>
+                <th>Propagation Medium</th>
+                <th>Potting Medium</th>
+                <th>Testing Notes</th>
+                <th>Genus</th>
+                <th>Species</th>
+                <th>Cultivar</th>
+                <th>Quantity</th>
+                <th>Fertilizer Name</th>
+                <th>Application Date</th>
+                <th>Potting Date</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Fetch data from the REST API endpoint
+        fetch('/plantgroups')
+            .then(response => response.json())
+            .then(data => {
+                const plantGroups = data.plant_groups;
+                const tableBody = document.querySelector('#plant-groups-table tbody');
+
+                // Generate table rows from the data
+                plantGroups.forEach(group => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${group.group_id}</td>
+                        <td>${group.group_name}</td>
+                        <td>${group.propagation_medium}</td>
+                        <td>${group.potting_medium}</td>
+                        <td>${group.testing_notes}</td>
+                        <td>${group.genus}</td>
+                        <td>${group.species}</td>
+                        <td>${group.cultivar}</td>
+                        <td>${group.quantity}</td>
+                        <td>${group.fertilizer_name}</td>
+                        <td>${group.application_date}</td>
+                        <td>${group.potting_date}</td>
+                        <td>${group.notes}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

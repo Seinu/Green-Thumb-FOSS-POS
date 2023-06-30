@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Plant Group</title>
+</head>
+<body>
+  <h2>Add Plant Group</h2>
+  <form method="post" action="/plantgroups/add">
+    <label for="group_name">Group Name:</label>
+    <input type="text" name="group_name" id="group_name" required><br>
+
+    <label for="propagation_medium">Propagation Medium:</label>
+    <input type="text" name="propagation_medium" id="propagation_medium" required><br>
+
+    <label for="potting_medium">Potting Medium:</label>
+    <input type="text" name="potting_medium" id="potting_medium" required><br>
+
+    <label for="testing_notes">Testing Notes:</label>
+    <textarea name="testing_notes" id="testing_notes" required></textarea><br>
+
+    <label for="genus">Genus:</label>
+    <input type="text" name="genus" id="genus" required><br>
+
+    <label for="species">Species:</label>
+    <input type="text" name="species" id="species" required><br>
+
+    <label for="cultivar">Cultivar:</label>
+    <input type="text" name="cultivar" id="cultivar" required><br>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" id="quantity" required><br>
+
+    <label for="fertilizer_name">Fertilizer Name:</label>
+    <input type="text" name="fertilizer_name" id="fertilizer_name" required><br>
+
+    <label for="application_date">Application Date:</label>
+    <input type="text" name="application_date" id="application_date" required><br>
+
+    <label for="potting_date">Potting Date:</label>
+    <input type="text" name="potting_date" id="potting_date" required><br>
+
+    <label for="notes">Notes:</label>
+    <textarea name="notes" id="notes" required></textarea><br>
+
+    <input type="submit" value="Add Plant Group">
+  </form>
+</body>
+</html>
